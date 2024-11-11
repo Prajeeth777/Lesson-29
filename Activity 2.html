@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity 2</title>
+    </head>
+    <body>
+        <h2>Async in JS</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+            async function add(a,b){
+                let sum=await(a+b);
+                display(sum);
+            }
+            function display(s){
+                document.getElementById("p1").innerHTML="Sum is "+s;
+            }
+            add(10,7)
+        </script>
+    </body>
+</html>

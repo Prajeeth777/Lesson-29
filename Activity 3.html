@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity 3</title>
+    </head>
+    <body>
+        <h2>Promise in JS</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+           function multiply(a,b){
+            let product=(a*b);
+            display(product);
+           }
+           function display(s){
+            document.getElementById("p1").innerHTML="Product is "+s;
+           }
+           let mypromise=new Promise(function(myResolve,MyReject){
+            var x=0;
+            if (x==0){
+                myResolve("Ok");
+            }
+            else{
+                MyReject("Error");
+            }
+           });
+           mypromise.then(
+            function(value){ multiply(30,5);},
+            function(error){multiply("error");}
+            );
+        </script>
+    </body>
+</html>

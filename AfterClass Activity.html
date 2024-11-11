@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AfterClass Activity</title>
+    </head>
+    <body>
+       <h2>AfterClass Activity</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+            async function multiply(a,b){
+                let product=await(a*b);
+                display(product);
+            }
+            function display(s){
+                document.getElementById("p1").innerHTML="Product is "+s;
+            }
+            multiply(10,7)
+        </script>
+    </body>
+</html>

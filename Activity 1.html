@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity 1</title>
+    </head>
+    <body>
+        <h2>JSON in JS</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+            var obj={name:"Ali", grade:1};
+            var JSONObj = JSON.stringify(obj);
+            var RecObj = JSON.parse(JSONObj);
+            document.getElementById("p1").innerHTML="My name is "+RecObj.name;
+            document.getElementById("p2").innerHTML="My grade is "+RecObj.grade;
+        </script>
+    </body>
+</html>

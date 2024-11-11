@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity 4</title>
+    </head>
+    <body>
+        <h2>Callback in JS</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+          function add(a,b,mycallback){
+            let sum=(a+b);
+            mycallback(sum);
+          }
+          function display(s){
+            document.getElementById("p1").innerHTML="Sum is "+s;
+          }
+          function avg(s){
+            document.getElementById("p2").innerHTML="Average is "+(s/2);
+          }
+          add(5,6,display);
+          add(8,2,avg);
+        </script>
+    </body>
+</html>
